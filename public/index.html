@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Awareness & Empowerment Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .resource-card {
+            transition: all 0.3s ease;
+            border-top: 4px solid #ec4899;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .emergency-btn {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-pink-600">Sakhi</a>
+              <div class="hidden md:flex space-x-8 items-center">
+    <a href="#home" class="text-gray-800 hover:text-pink-600">Home</a>
+    <a href="#issues" class="text-gray-800 hover:text-pink-600">Issues</a>
+    <a href="#resources" class="text-gray-800 hover:text-pink-600">Resources</a>
+    <a href="#stories" class="text-gray-800 hover:text-pink-600">Stories</a>
+    <a href="#contact" class="text-gray-800 hover:text-pink-600">Contact</a>
+
+    <!-- Login / Signup / Welcome / Logout -->
+    <a href="#" id="loginBtn" class="text-gray-800 hover:text-pink-600">Login</a>
+    <a href="#" id="signupBtn" class="text-gray-800 hover:text-pink-600">Signup</a>
+    <span id="welcomeUser" class="hidden font-semibold text-pink-600"></span>
+    <a href="#" id="logoutBtn" class="hidden text-gray-800 hover:text-red-600">Logout</a>
+</div>
+
+                <button aria-label="Toggle navigation menu" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-image relative bg-gray-900 text-white">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7ff2a964-3fb6-4966-9874-69c56b175ad9.png" alt="Empowered women standing together" class="w-full h-[80vh] md:h-screen object-cover"/>
+        <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+            <div class="max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Empowering Women, Transforming Society</h1>
+                <p class="text-xl md:text-2xl mb-8">A platform for awareness, education, and action towards gender equality and women's rights</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#resources" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Get Help</a>
+                    <a href="#issues" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Why This Matters</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="stat-card bg-pink-50 p-8 rounded-lg text-center transition duration-300">
+                    <div class="text-5xl font-bold text-pink-600 mb-4">1 in 3</div>
+                    <h3 class="text-xl font-semibold mb-4">Women Experience Violence</h3>
+                    <p class="text-gray-600">Worldwide, 35% of women have experienced physical or sexual violence</p>
+                </div>
+                <div class="stat-card bg-purple-50 p-8 rounded-lg text-center transition duration-300">
+                    <div class="text-5xl font-bold text-purple-600 mb-4">47%</div>
+                    <h3 class="text-xl font-semibold mb-4">Gender Pay Gap</h3>
+                    <p class="text-gray-600">Women in India earn 47% less than men for similar work</p>
+                </div>
+                <div class="stat-card bg-blue-50 p-8 rounded-lg text-center transition duration-300">
+                    <div class="text-5xl font-bold text-blue-600 mb-4">24%</div>
+                    <h3 class="text-xl font-semibold mb-4">Parliament Representation</h3>
+                    <p class="text-gray-600">Only 24% of parliamentary seats worldwide are held by women</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Issues Section -->
+    <section id="issues" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Key Women's Issues</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Understanding the challenges women face is the first step towards creating change</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Issue 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/03e090cb-c0f2-4ae4-b1f5-5ce48eff1baf.png" alt="Woman looking distressed holding her phone with harassment alert notification visible" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Gender-Based Violence</h3>
+                        <p class="text-gray-600 mb-4">Domestic violence, sexual harassment, and assault remain pervasive problems affecting women globally.</p>
+                        <a href="#" class="text-pink-600 font-semibold hover:underline">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Issue 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9f96a1ca-ff21-444c-a3d5-7c394568cd25.png" alt="Two women in workplace one typing on laptop one giving presentation showing professional environment" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Workplace Inequality</h3>
+                        <p class="text-gray-600 mb-4">From pay gaps to glass ceilings, women face systemic barriers in professional environments.</p>
+                        <a href="#" class="text-pink-600 font-semibold hover:underline">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Issue 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c24654a0-cb6e-4707-8a16-5212834ca0d6.png" alt="Group of girls in school uniform studying happily in classroom with teacher" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Education Access</h3>
+                        <p class="text-gray-600 mb-4">Millions of girls worldwide are denied access to quality education due to social and economic factors.</p>
+                        <a href="#" class="text-pink-600 font-semibold hover:underline">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Resources & Support</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Help is available. You are not alone.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Resource 1 -->
+                <div class="resource-card bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="text-blue-500 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Emergency Contacts</h3>
+                    <p class="text-gray-600 mb-4">24/7 helplines for immediate assistance with domestic violence, sexual assault, and mental health crises.</p>
+                    <button aria-label="View emergency contacts" class="emergency-btn bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                        View Emergency Contacts
+                    </button>
+                </div>
+                
+                <!-- Resource 2 -->
+                <div class="resource-card bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="text-green-500 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Legal Rights Guide</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive information about laws protecting women's rights in various situations.</p>
+                    <a href="#" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                        Learn Your Rights
+                    </a>
+                </div>
+                
+                <!-- Resource 3 -->
+                <div class="resource-card bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <div class="text-purple-500 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Support Groups</h3>
+                    <p class="text-gray-600 mb-4">Connect with others who share similar experiences in safe, moderated group sessions.</p>
+                    <a href="#" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                        Find Support
+                    </a>
+                </div>
+            </div>
+            
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm text-yellow-700">
+                            <strong>Important:</strong> If you're in immediate danger, please call your local emergency number or the national women's helpline at <strong>181</strong> (India) or <strong>1091</strong> (Women's Helpline India).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section id="stories" class="py-16 bg-gradient-to-r from-pink-50 to-purple-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Success Stories</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Inspiration from women who overcame challenges to create positive change</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Story 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fa0b32d7-72ed-419f-a742-2b2b8ef47748.png" alt="Successful woman entrepreneur speaking at conference with audience in background" class="w-full h-64 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-pink-100 text-pink-800 font-bold text-sm px-3 py-1 rounded-full">Entrepreneurship</div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">From Domestic Worker to CEO</h3>
+                        <p class="text-gray-600 mb-4">"I started with nothing but determination. Today I employ 50 women in my organic textile business."</p>
+                        <p class="font-semibold text-gray-700">- Priya Sharma, Founder of EcoWeave</p>
+                    </div>
+                </div>
+                
+                <!-- Story 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9447540f-e5ef-4110-99f4-10a61e0359d6.png" alt="Young woman in laboratory coat conducting scientific research with microscope" class="w-full h-64 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-100 text-purple-800 font-bold text-sm px-3 py-1 rounded-full">STEM</div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Breaking Barriers in Science</h3>
+                        <p class="text-gray-600 mb-4">"They told me science wasn't for girls. Now I lead a team developing life-saving medications."</p>
+                        <p class="font-semibold text-gray-700">- Dr. Ananya Patel, Pharmaceutical Researcher</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Share Your Story
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-pink-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Together We Can Make a Difference</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Your voice matters. Join our movement for gender equality and women's empowerment.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="bg-white hover:bg-gray-100 text-pink-600 font-bold py-3 px-6 rounded-lg transition duration-300">Volunteer</a>
+                <a href="#" class="bg-transparent border-2 border-white hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Donate</a>
+                <a href="#" class="bg-transparent border-2 border-white hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Spread the Word</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Have questions or need help? Reach out to our team.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                                <option value="general">General Inquiry</option>
+                                <option value="help">Need Help</option>
+                                <option value="volunteer">Volunteer Opportunity</option>
+                                <option value="donation">Donation Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Other Ways to Connect</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-pink-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-semibold text-gray-800">Helpline</h4>
+                                <p class="text-gray-600">24/7 National Women's Helpline: <strong>181 / 1091</strong></p>
+                                <p class="text-gray-600">General Inquiries: <strong>+91 98765 43210</strong></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-pink-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-semibold text-gray-800">Email</h4>
+                                <p class="text-gray-600"><strong>contact@sakhi.org.in</strong></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-pink-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-semibold text-gray-800">Head Office</h4>
+                                <p class="text-gray-600">123 Empowerment Avenue, Women's Plaza, New Delhi - 110001</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-200 hover:bg-pink-600 hover:text-white w-10 h-10 flex items-center justify-center rounded-full text-gray-700 transition duration-300">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-gray-200 hover:bg-pink-600 hover:text-white w-10 h-10 flex items-center justify-center rounded-full text-gray-700 transition duration-300">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-gray-200 hover:bg-pink-600 hover:text-white w-10 h-10 flex items-center justify-center rounded-full text-gray-700 transition duration-300">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-gray-200 hover:bg-pink-600 hover:text-white w-10 h-10 flex items-center justify-center rounded-full text-gray-700 transition duration-300">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-pink-400">Sakhi</h3>
+                    <p class="text-gray-400 mt-4">Empowering women through awareness, education, and action for a more equitable society.</p>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-pink-400 transition duration-300">Home</a></li>
+                        <li><a href="#issues" class="text-gray-400 hover:text-pink-400 transition duration-300">Key Issues</a></li>
+                        <li><a href="#resources" class="text-gray-400 hover:text-pink-400 transition duration-300">Resources</a></li>
+                        <li><a href="#stories" class="text-gray-400 hover:text-pink-400 transition duration-300">Success Stories</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-pink-400 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 transition duration-300">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Subscribe</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news and initiatives.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-900">
+                        <button type="submit" class="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-r-lg transition duration-300">→</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2025 Sakhi Women's Awareness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-pink-600 hover:bg-pink-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition duration-300 opacity-0 invisible">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- Login Modal -->
+<div id="loginModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+    <h2 class="text-2xl font-bold mb-4">Login</h2>
+    <form id="loginForm" class="space-y-4">
+      <input type="email" id="loginEmail" placeholder="Email" class="w-full p-2 border rounded" required>
+      <input type="password" id="loginPassword" placeholder="Password" class="w-full p-2 border rounded" required>
+      <button type="submit" class="w-full bg-pink-600 text-white p-2 rounded">Login</button>
+    </form>
+    <button id="closeLogin" class="mt-4 text-gray-600 hover:text-pink-600">Close</button>
+    <p id="loginMsg" class="mt-3 text-sm"></p>
+  </div>
+</div>
+
+<!-- Signup Modal -->
+<div id="signupModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+    <h2 class="text-2xl font-bold mb-4">Signup</h2>
+    <form id="signupForm" class="space-y-4">
+      <input type="text" id="signupName" placeholder="Full Name" class="w-full p-2 border rounded" required>
+      <input type="email" id="signupEmail" placeholder="Email" class="w-full p-2 border rounded" required>
+      <input type="password" id="signupPassword" placeholder="Password" class="w-full p-2 border rounded" required>
+      <button type="submit" class="w-full bg-pink-600 text-white p-2 rounded">Signup</button>
+    </form>
+    <button id="closeSignup" class="mt-4 text-gray-600 hover:text-pink-600">Close</button>
+    <p id="signupMsg" class="mt-3 text-sm"></p>
+  </div>
+</div>
+
+    <!-- Emergency Modal -->
+    <div id="emergencyModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-red-600">Emergency Contacts</h3>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <div class="p-4 border border-red-100 rounded-lg bg-red-50">
+                    <h4 class="font-bold text-red-700">National Women's Helpline</h4>
+                    <p class="text-red-600">181 (Women in Distress)</p>
+                    <p class="text-red-600">1091 (Police)</p>
+                </div>
+                <div class="p-4 border border-blue-100 rounded-lg bg-blue-50">
+                    <h4 class="font-bold text-blue-700">Domestic Violence</h4>
+                    <p class="text-blue-600">100 (Police)</p>
+                    <p class="text-blue-600">1800-200-0024 (Women Helpline)</p>
+                </div>
+                <div class="p-4 border border-green-100 rounded-lg bg-green-50">
+                    <h4 class="font-bold text-green-700">Mental Health</h4>
+                    <p class="text-green-600">1800-599-0019 (Vandrevala Foundation)</p>
+                </div>
+                <div class="p-4 border border-purple-100 rounded-lg bg-purple-50">
+                    <h4 class="font-bold text-purple-700">Child Abuse</h4>
+                    <p class="text-purple-600">1098 (CHILDLINE)</p>
+                </div>
+            </div>
+            <div class="mt-6">
+                <button id="closeModalBtn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+/* ---------------- existing UI behavior: Back-to-top, Emergency modal, mobile toggle ---------------- */
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (!backToTopBtn) return;
+  if (window.pageYOffset > 300) {
+    backToTopBtn.classList.remove('opacity-0', 'invisible');
+    backToTopBtn.classList.add('opacity-100', 'visible');
+  } else {
+    backToTopBtn.classList.remove('opacity-100', 'visible');
+    backToTopBtn.classList.add('opacity-0', 'invisible');
+  }
+});
+backToTopBtn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+const emergencyBtn = document.querySelector('.emergency-btn');
+const emergencyModal = document.getElementById('emergencyModal');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const closeModal = document.getElementById('closeModal');
+
+if (emergencyBtn) {
+  emergencyBtn.addEventListener('click', () => {
+    emergencyModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  });
+}
+if (closeModalBtn) {
+  closeModalBtn.addEventListener('click', () => {
+    emergencyModal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  });
+}
+if (closeModal) {
+  closeModal.addEventListener('click', () => {
+    emergencyModal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  });
+}
+
+const menuBtn = document.querySelector("nav button[aria-label='Toggle navigation menu']");
+const navMenu = document.querySelector('.md\\:flex.space-x-8');
+menuBtn?.addEventListener('click', function () {
+  if (!navMenu) return;
+  navMenu.classList.toggle('hidden');
+  navMenu.classList.toggle('flex');
+});
+
+/* ---------------- Contact form: AJAX POST to /api/contact ---------------- */
+(function setupContactForm(){
+  const contactForm = document.querySelector('#contact form') || document.querySelector('form');
+  if (!contactForm) return;
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = {
+      name: contactForm.name?.value || '',
+      email: contactForm.email?.value || '',
+      subject: contactForm.subject?.value || '',
+      message: contactForm.message?.value || ''
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      const data = await res.json();
+      alert(data.msg || 'Response received');
+      if (data.success) contactForm.reset();
+    } catch (err) {
+      console.error('contact submit err', err);
+      alert('Something went wrong!');
+    }
+  });
+})();
+
+/* ---------------- Login / Signup UI and logic ---------------- */
+(function setupAuth() {
+  // elements
+  const loginBtn = document.getElementById('loginBtn');
+  const signupBtn = document.getElementById('signupBtn');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const welcomeUser = document.getElementById('welcomeUser');
+
+  const loginModal = document.getElementById('loginModal');
+  const signupModal = document.getElementById('signupModal');
+  const closeLogin = document.getElementById('closeLogin');
+  const closeSignup = document.getElementById('closeSignup');
+
+  const loginForm = document.getElementById('loginForm');
+  const signupForm = document.getElementById('signupForm');
+  const loginMsg = document.getElementById('loginMsg');
+  const signupMsg = document.getElementById('signupMsg');
+
+  // open/close
+  loginBtn?.addEventListener('click', (e) => { e.preventDefault(); loginModal.classList.remove('hidden'); });
+  signupBtn?.addEventListener('click', (e) => { e.preventDefault(); signupModal.classList.remove('hidden'); });
+  closeLogin?.addEventListener('click', () => loginModal.classList.add('hidden'));
+  closeSignup?.addEventListener('click', () => signupModal.classList.add('hidden'));
+
+  // on load — show welcome if token+name exist
+  function refreshAuthUI() {
+    const token = localStorage.getItem('token');
+    const userName = localStorage.getItem('userName');
+    if (token && userName) {
+      loginBtn?.classList.add('hidden');
+      signupBtn?.classList.add('hidden');
+      logoutBtn?.classList.remove('hidden');
+      welcomeUser?.classList.remove('hidden');
+      welcomeUser.textContent = 'Welcome, ' + userName;
+    } else {
+      loginBtn?.classList.remove('hidden');
+      signupBtn?.classList.remove('hidden');
+      logoutBtn?.classList.add('hidden');
+      welcomeUser?.classList.add('hidden');
+      welcomeUser.textContent = '';
+    }
+  }
+  refreshAuthUI();
+
+  // Signup handler
+  signupForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    signupMsg.textContent = '';
+    const name = document.getElementById('signupName').value.trim();
+    const email = document.getElementById('signupEmail').value.trim();
+    const password = document.getElementById('signupPassword').value;
+
+    try {
+      const res = await fetch('/api/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password })
+      });
+      const data = await res.json();
+      if (data.success) {
+        signupMsg.textContent = '✅ Signup successful! Please login.';
+        signupMsg.className = 'text-green-600';
+        setTimeout(() => {
+          signupModal.classList.add('hidden');
+        }, 900);
+      } else {
+        signupMsg.textContent = '❌ ' + (data.msg || 'Signup failed');
+        signupMsg.className = 'text-red-600';
+      }
+    } catch (err) {
+      console.error('signup err', err);
+      signupMsg.textContent = '❌ Server error';
+      signupMsg.className = 'text-red-600';
+    }
+  });
+
+  // Login handler
+  loginForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    loginMsg.textContent = '';
+    const email = document.getElementById('loginEmail').value.trim();
+    const password = document.getElementById('loginPassword').value;
+
+    try {
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+      const data = await res.json();
+      if (data.success) {
+        // Expectation: backend returns token AND user object { id, name, email, isAdmin }
+        localStorage.setItem('token', data.token);
+        if (data.user && data.user.name) localStorage.setItem('userName', data.user.name);
+        else localStorage.removeItem('userName');
+
+        loginMsg.textContent = '✅ Login successful!';
+        loginMsg.className = 'text-green-600';
+
+        refreshAuthUI();
+        setTimeout(() => loginModal.classList.add('hidden'), 900);
+      } else {
+        loginMsg.textContent = '❌ ' + (data.msg || 'Login failed');
+        loginMsg.className = 'text-red-600';
+      }
+    } catch (err) {
+      console.error('login err', err);
+      loginMsg.textContent = '❌ Server error';
+      loginMsg.className = 'text-red-600';
+    }
+  });
+
+  // Logout
+  logoutBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    localStorage.removeItem('token');
+    localStorage.removeItem('userName');
+    refreshAuthUI();
+    alert('Logged out successfully!');
+  });
+})();
+</script>
+</body>
+</html>
